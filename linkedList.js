@@ -70,7 +70,8 @@ class LinkedList {
     //     thisNode = thisNode.next;
     //   }
     //   return thisNode;
-    }
+    // }
   }
+}
   
   module.exports = LinkedList

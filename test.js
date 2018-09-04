@@ -30,13 +30,17 @@ describe('Delete a random item in the list', function () {
             '{"head":{"value":"third","next":{"value":"first","next":null}},"length":2}')
 })
 })
-// describe('Search an item in the list', function () {
-//     var list = new LinkedList('first','second','third')
-//     it('Should display the searched item, and the next pointer value', () => {
-//         // list.addToHead('second'),
-//         list.find('first',)
-//         assert.equal(
-//             JSON.stringify(list, null),
-//             '{"head":{"value":"first","next":null},"length":1}')
-// })
-// })
+describe('Search an item in the list', function () {
+    var list = new LinkedList('first','second','third')
+    it('Should display the searched item, and the next pointer values', () => {
+        assert.equal(  JSON.stringify(list.find('second'),null),
+            '{"value":"second","next":{"value":"first","next":null}}')
+})
+})
+describe('Search an item that is not in the list', function () {
+    var list = new LinkedList('first','second','third')
+    it('Should display null', () => {
+        assert.equal(  JSON.stringify(list.find('aa')),
+            'null')
+})
+})
